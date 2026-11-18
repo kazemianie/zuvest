@@ -1,0 +1,63 @@
+name: Update site
+
+# Every 10 minutes: pull the latest published reports, rebuild the site and publish it if anything changed.
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-site
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out this site
+        uses: actions/checkout@v4
+        with:
+          path: live
+
+      - name: Get the latest reports
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ vars.SOURCE_REPO }}
+          ref: mobile
+          ssh-key: ${{ secrets.SOURCE_SSH_KEY }}
+          path: source-reports
+          sparse-checkout: docs/reports
+
+      - name: Get the site builder
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ vars.SOURCE_REPO }}
+          ref: website
+          ssh-key: ${{ secrets.SOURCE_SSH_KEY }}
+          path: source-site
+          sparse-checkout: site
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build
+        run: |
+          pip install --quiet markdown
+          python source-site/site/build.py --src source-reports/docs/reports --out dist
+
+      - name: Publish if changed
+        working-directory: live
+        run: |
+          find . -mindepth 1 -maxdepth 1 ! -name .git ! -name .github ! -name README.md -exec rm -rf {} +
+          cp -a ../dist/. .
+          git add -A
+          if git diff --cached --quiet; then echo "Site is already up to date."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update research $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
