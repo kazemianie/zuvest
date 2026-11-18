@@ -1,9 +1,12 @@
 name: Update site
 
-# Every 10 minutes: pull the latest published reports, rebuild the site and publish it if anything changed.
+# Pull the latest published reports, rebuild the site and publish it if anything changed.
+# Runs when the research repo signals a new report, plus every 15 minutes as a backup.
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "7,22,37,52 * * * *"
+  repository_dispatch:
+    types: [new-report]
   workflow_dispatch:
 
 permissions:
