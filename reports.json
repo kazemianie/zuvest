@@ -1,0 +1,38 @@
+[
+ {
+  "id": "20261118172201_JPM",
+  "ticker": "JPM",
+  "company": "JPMorgan Chase & Co.",
+  "sector": "Financial Services",
+  "rating": "Neutral",
+  "consensus": 0.0,
+  "generated_at": "2026-11-18T17:28:24+00:00"
+ },
+ {
+  "id": "20261118172200_MSFT",
+  "ticker": "MSFT",
+  "company": "Microsoft Corporation",
+  "sector": "Technology",
+  "rating": "Neutral",
+  "consensus": 0.0,
+  "generated_at": "2026-11-18T17:26:16+00:00"
+ },
+ {
+  "id": "20261118172159_AAPL",
+  "ticker": "AAPL",
+  "company": "Apple Inc.",
+  "sector": "Technology",
+  "rating": "Neutral",
+  "consensus": 0.124,
+  "generated_at": "2026-11-18T17:24:15+00:00"
+ },
+ {
+  "id": "20261118172158_NVDA",
+  "ticker": "NVDA",
+  "company": "NVIDIA Corporation",
+  "sector": "Technology",
+  "rating": "Cautious",
+  "consensus": -0.426,
+  "generated_at": "2026-11-18T17:22:05+00:00"
+ }
+]
