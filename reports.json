@@ -1,5 +1,14 @@
 [
  {
+  "id": "20261118203750_MU",
+  "ticker": "MU",
+  "company": "Micron Technology, Inc.",
+  "sector": "Technology",
+  "rating": "Cautious",
+  "consensus": -0.268,
+  "generated_at": "2026-11-18T20:38:34+00:00"
+ },
+ {
   "id": "20261118184657_GOOGL",
   "ticker": "GOOGL",
   "company": "Alphabet Inc.",
