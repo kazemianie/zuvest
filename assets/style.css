@@ -144,3 +144,14 @@ h1,h2,h3{letter-spacing:-.02em;line-height:1.2} h2{font-size:1.45rem;margin:42px
 .foot-row{display:flex;gap:18px;justify-content:space-between;flex-wrap:wrap;padding-top:14px} .footer a{color:#a5b4fc}
 .hide{display:none!important}
 @media (max-width:640px){.topbar nav a{padding:8px 8px;font-size:.82rem}.brand span:last-child{display:none}.filters input{min-width:0;width:100%}.ag-body{padding-left:18px}.rprice{text-align:left}}
+
+/* Report versions */
+.versions{margin-top:18px;display:flex;flex-direction:column;gap:8px}
+.v-label{font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#a5b4fc}
+.vlist{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
+.vpill{display:flex;flex-direction:column;gap:2px;min-width:170px;padding:9px 12px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:#cbd5e1;white-space:nowrap}
+.vpill:hover{text-decoration:none;background:rgba(255,255,255,.1)}
+.vpill.on{border-color:var(--cyan);background:rgba(6,182,212,.12);color:#fff}
+.v-t{font-weight:600;font-size:.85rem} .v-m{font-size:.75rem;color:#94a3b8}
+.latest-tag{font-size:.68rem;font-weight:700;color:#047857;background:#d1fae5;padding:2px 7px;border-radius:999px;margin-left:4px;vertical-align:middle}
+.warn-box a{font-weight:600}

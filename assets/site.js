@@ -20,6 +20,16 @@
     rating = b.dataset.f; apply();
   });
 
+  // Show timestamps in the reader's own time zone (the HTML fallback is UTC).
+  document.querySelectorAll("time[data-local]").forEach((t) => {
+    const d = new Date(t.getAttribute("datetime"));
+    if (isNaN(d)) return;
+    t.title = d.toUTCString();
+    t.textContent = t.dataset.local === "t"
+      ? d.toLocaleString(undefined, { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" })
+      : d.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
+  });
+
   // Render charts lazily when they scroll into view (keeps report pages fast on phones).
   const nodes = document.querySelectorAll("script[data-chart]");
   if (!nodes.length) return;
