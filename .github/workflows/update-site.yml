@@ -53,7 +53,7 @@ jobs:
       - name: Publish if changed
         working-directory: live
         run: |
-          find . -mindepth 1 -maxdepth 1 ! -name .git ! -name .github ! -name README.md -exec rm -rf {} +
+          find . -mindepth 1 -maxdepth 1 ! -name .git ! -name .github ! -name README.md ! -name CNAME -exec rm -rf {} +
           cp -a ../dist/. .
           git add -A
           if git diff --cached --quiet; then echo "Site is already up to date."; exit 0; fi
