@@ -1,5 +1,32 @@
 [
  {
+  "id": "20261119181347_BABA",
+  "ticker": "BABA",
+  "company": "Alibaba Group Holding Limited",
+  "sector": "Consumer Cyclical",
+  "rating": "Cautious",
+  "consensus": -0.294,
+  "generated_at": "2026-11-19T18:21:19+00:00"
+ },
+ {
+  "id": "20261119181340_PDD",
+  "ticker": "PDD",
+  "company": "PDD Holdings Inc.",
+  "sector": "Consumer Cyclical",
+  "rating": "Neutral",
+  "consensus": 0.0,
+  "generated_at": "2026-11-19T18:19:02+00:00"
+ },
+ {
+  "id": "20261119181331_WMT",
+  "ticker": "WMT",
+  "company": "Walmart Inc.",
+  "sector": "Consumer Defensive",
+  "rating": "Neutral",
+  "consensus": 0.124,
+  "generated_at": "2026-11-19T18:16:54+00:00"
+ },
+ {
   "id": "20261119181320_AMD",
   "ticker": "AMD",
   "company": "Advanced Micro Devices, Inc.",
