@@ -50,7 +50,7 @@ jobs:
 
       - name: Build
         run: |
-          pip install --quiet markdown
+          pip install --quiet markdown pillow
           python source-site/site/build.py --src source-reports/docs/reports --out dist
 
       - name: Publish if changed
