@@ -1,5 +1,14 @@
 [
  {
+  "id": "20261119181320_AMD",
+  "ticker": "AMD",
+  "company": "Advanced Micro Devices, Inc.",
+  "sector": "Technology",
+  "rating": "Cautious",
+  "consensus": -0.272,
+  "generated_at": "2026-11-19T18:14:07+00:00"
+ },
+ {
   "id": "20261119173050_GOOG",
   "ticker": "GOOG",
   "company": "Alphabet Inc.",
