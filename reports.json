@@ -1,5 +1,14 @@
 [
  {
+  "id": "20261119143459_NVDA",
+  "ticker": "NVDA",
+  "company": "NVIDIA Corporation",
+  "sector": "Technology",
+  "rating": "Cautious",
+  "consensus": -0.402,
+  "generated_at": "2026-11-19T14:35:43+00:00"
+ },
+ {
   "id": "20261118203750_MU",
   "ticker": "MU",
   "company": "Micron Technology, Inc.",
