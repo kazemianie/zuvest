@@ -1,5 +1,14 @@
 [
  {
+  "id": "20261120192448_INSM",
+  "ticker": "INSM",
+  "company": "Insmed Incorporated",
+  "sector": "Healthcare",
+  "rating": "Neutral",
+  "consensus": 0.0,
+  "generated_at": "2026-11-20T19:28:23+00:00"
+ },
+ {
   "id": "20261120192427_SPCX",
   "ticker": "SPCX",
   "company": "Space Exploration Technologies Corp.",
