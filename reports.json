@@ -1,5 +1,14 @@
 [
  {
+  "id": "20261120192427_SPCX",
+  "ticker": "SPCX",
+  "company": "Space Exploration Technologies Corp.",
+  "sector": "Industrials",
+  "rating": "Cautious",
+  "consensus": -0.28,
+  "generated_at": "2026-11-20T19:25:15+00:00"
+ },
+ {
   "id": "20261120150916_NVDA",
   "ticker": "NVDA",
   "company": "NVIDIA Corporation",
